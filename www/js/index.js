@@ -4,7 +4,7 @@ $(document).on("pagecreate","#pageone",function(){
   
   	$('#mytext').on("click",function(){
         alert(random());
-        if(random() == "true"){
+        if(random()){
             navigator.notification.beep(1); 
         }
         else {
@@ -13,7 +13,7 @@ $(document).on("pagecreate","#pageone",function(){
  	});                       
 
 });
-
+ 
 function random(){
     return !Math.round(Math.random());
     
