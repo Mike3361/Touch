@@ -2,12 +2,19 @@
 
 $(document).on("pagecreate","#pageone",function(){
   
-  	$('#mytext').on("taphold",function(){
-    	alert($(this).random());
+  	$('#mytext').on("click",function(){
+        alert(random());
+        if(random() == "true"){
+            navigator.notification.beep(1); 
+        }
+        else {
+             navigator.notification.beep(2); }
+        
  	});                       
 
 });
 
 function random(){
     return !Math.round(Math.random());
+    
 }
